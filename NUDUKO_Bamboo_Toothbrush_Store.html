@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NUDUKO Bamboo Toothbrush</title>
+<style>
+body {font-family: Arial, sans-serif; margin:0; background:#f0fdf4;}
+header {background:#166534; color:white; text-align:center; padding:40px 20px;}
+.price {font-size:24px; margin-top:10px;}
+.old {text-decoration:line-through; color:#bbf7d0; margin-right:10px;}
+.container {max-width:1100px; margin:auto; padding:40px 20px;}
+.grid {display:grid; grid-template-columns:1fr 1fr; gap:40px;}
+img {width:100%; border-radius:15px;}
+button {background:#166534; color:white; padding:12px 20px; border:none; border-radius:10px; cursor:pointer;}
+button:hover {background:#14532d;}
+input, select {padding:8px; margin-top:10px; width:100%;}
+.section {margin-top:60px;}
+footer {background:#111; color:white; text-align:center; padding:20px; margin-top:40px;}
+.review {background:white; padding:20px; border-radius:15px; margin-bottom:15px;}
+</style>
+<script>
+function updateTotal(){
+    var qty = document.getElementById("qty").value;
+    var city = document.getElementById("city").value;
+    var delivery = {"Lahore":200,"Karachi":250,"Islamabad":220,"Other":300};
+    var total = (qty * 600) + delivery[city];
+    document.getElementById("delivery").innerHTML = delivery[city];
+    document.getElementById("total").innerHTML = total;
+}
+</script>
+</head>
+<body onload="updateTotal()">
+
+<header>
+<h1>NUDUKO Bamboo Toothbrush</h1>
+<p>Eco-Friendly • Biodegradable • Gentle on Gums</p>
+<div class="price"><span class="old">Rs. 700</span> Rs. 600</div>
+</header>
+
+<div class="container grid">
+<div>
+<img src="babmoo toothbrush.jpg" alt="Bamboo Toothbrush">
+</div>
+
+<div>
+<h2>Product Details</h2>
+<ul>
+<li>100% Natural Bamboo Handle</li>
+<li>Soft BPA-Free Bristles</li>
+<li>Biodegradable & Eco-Friendly</li>
+<li>Pack of 10 (Individually Wrapped)</li>
+</ul>
+
+<label>Quantity:</label>
+<input type="number" id="qty" value="1" min="1" onchange="updateTotal()">
+
+<label>Select City:</label>
+<select id="city" onchange="updateTotal()">
+<option>Lahore</option>
+<option>Karachi</option>
+<option>Islamabad</option>
+<option>Other</option>
+</select>
+
+<p>Delivery Charges: Rs. <span id="delivery"></span></p>
+<p><strong>Total: Rs. <span id="total"></span></strong></p>
+
+<br>
+<a href="https://wa.me/923107783666?text=Hello%20I%20want%20to%20order%20NUDUKO%20Bamboo%20Toothbrush" target="_blank">
+<button>Order on WhatsApp</button>
+</a>
+</div>
+</div>
+
+<div class="container section">
+<h2>Cash on Delivery Order Form</h2>
+<input placeholder="Full Name">
+<input placeholder="Phone Number">
+<input placeholder="Full Address">
+<br><br>
+<button>Place COD Order</button>
+</div>
+
+<div class="container section">
+<h2>Customer Reviews ⭐⭐⭐⭐⭐</h2>
+<div class="review">Very good quality and eco-friendly product! – Ayesha K.</div>
+<div class="review">Soft bristles and perfect for daily use. – Ahmed R.</div>
+<div class="review">Fast delivery and nice packaging. – Sara M.</div>
+</div>
+
+<footer>
+© 2026 NUDUKO | WhatsApp: 03107783666
+</footer>
+
+</body>
+</html>
